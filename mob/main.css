@@ -1,0 +1,112 @@
+@media (max-width:700px) {
+    .mainmob{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 900px;
+        padding-top: 20px;
+        transform: translateY(-10px);
+        background:  rgb(0,156,184);
+        background: linear-gradient( bottom 97deg, rgba(0,156,184,1) 0%, rgba(0,156,184,1) 77%, rgba(0,255,204,1) 100%);
+    }
+    .fundo-imagem{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+
+    }
+    #imagem-principal{
+        max-width: 300px;
+    }
+    .fundo-cursos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+    .fundo-texto{
+        display: flex;
+        height: 200px;
+        transform: translateY(30px);
+    }
+    #texto-curso-principal{
+        font-size: 38px;
+    }
+    #texto-curso-segundario{
+        font-size: 30px;
+        margin:0px;
+    }
+    .fundo-cursosmob{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 25px;
+        padding: 10px;
+        transform: translateY(-70px);
+    }
+ 
+    #bloco-modulomob{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        width: 100%;
+        height: 110px;
+        background-color:#024A56;
+        border: 8px solid #35E0FF;
+        border-end-end-radius: 0px;
+        transition: 0.8s;
+        margin-top: 50px;
+    }
+    #bloco-modulomob:active{
+        background-color: #35E0FF;
+        border: 8px solid #00ffcc;
+    }
+
+    #bloco-cimamob{
+        width: 100%;
+        height: 30%;
+        padding: 10px;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+    #icone-modulomob{
+        width: 30px;
+        height: 30px;
+    }
+    
+    #titulo-cursomob{
+        font-size: 20px;
+        font-weight: bold;
+        color:white;
+    }
+    #comece-titulomob{
+        font-size: 25px;
+        color: white;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
