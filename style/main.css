@@ -2,12 +2,11 @@ main{
     display: flex;
     width: 100%;
     height: 700px;
-    background: rgb(0,156,184);
-    background: linear-gradient(47deg, rgba(0,156,184,1) 0%, rgba(0,156,184,1) 77%, rgba(0,255,204,1) 100%);
+    background-color: #1F1F1F;
     transform: translateY(78px);
 }
 
-.fundo-cursos{
+.fundo-cursos,.fundo-cursosmob{
     display: none;
 }
 
@@ -16,6 +15,19 @@ main{
     align-items: center;
     justify-content: center;
     width: 60%;
+    animation:fundo-imagem ;
+    animation-duration:1s;
+    transform: scale(3.8);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+
+}
+@keyframes fundo-imagem {
+    100%{
+        transform: scale(1.0);
+        opacity: 10;
+    }
 }
 #imagem-principal{
     width:460px;
@@ -30,69 +42,129 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 70%;
     font-size: 25px;
     padding: 10px;
+    animation: fundo-cursos;
+    animation-duration: 0.5s;
+    transform: scale(3.8);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+}
+@keyframes fundo-cursos {
+    100%{
+        transform: scale(1.0);
+        opacity: 10;
+    }
 }
 
 .fundo-texto{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 70%;
     color: white;
+
 }
 #texto-curso-principal{
     display: flex;
-    justify-content: center;
-    font-size: 55px;
+    text-align: center;
+    font-size: 40px;
     margin: 0px;
-    font-weight: bold;
-    padding: 10px;
-    width: 100%;
+    width: 50%;
+    padding: 0;
+    height: 50px;
+    animation:texto-curso-principal ;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
+@keyframes texto-curso-principal {
+    100%{
+        opacity: 0.9;
+    }    
+}
+#colorcurso{
+    display: flex;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    margin-left:-10px;
+    color:white; 
+
+    animation: textoFuturo;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    opacity: 0.0;
+}
+@keyframes textoFuturo {
+    100%{
+        color: #00FDFF;
+        border-bottom: 3px solid #00FDFF;
+        opacity: 0.9; 
+       }
+}
+
+
 #texto-curso-segundario{
     display: flex;
-    justify-content: center;
-    width: 70%;
-    font-size: 35px;
-    margin: 0px;
-    padding: 10px;
-    margin-top: 30px;
-    font-weight: bold;
-    background-color: #024A56;
-    transition: 0.8s;
-    cursor: pointer;
+    text-align: left;
+    font-size: 18px;
+    width: 100%;
+    line-height: 0.7cm;
+    padding: 0;
+    margin: 0;
+    margin-top:60px ;
+    
+    animation: texto-curso-segundario;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    transform: translateX(7000px);
+
 }
-#texto-curso-segundario:hover{
-    font-weight: bold;
-    background-color: #00FDFF;
+@keyframes texto-curso-segundario {
+    50%{
+        transform: translateX(0px);
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1.0);
+        margin-top: 10px;
+    }    
 }
+
+
+
 
 .fundo-modulos{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 15px;
     width: 90%;
     height: 200px;
-    transform: translateY(-70px);
+    margin-top: -250px;
 }
 #bloco-modulo{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    width: 24%;
-    height: 110px;
+    width: 30%;
+    height: 100px;
     background-color:#024A56;
     border: 8px solid #35E0FF;
     border-end-end-radius: 28%;
-    margin-left:25px;
-    transform: translateX(800px);
-    transition: 0.8s;
+    margin-left:10px;
+    margin-top:15px ;
+    transform: translateX(8000px);
+
+
+
+
+    transition: 0.2s;
     animation: aparecer;
     animation-duration: 2s ;
     animation-fill-mode: forwards;
@@ -100,7 +172,7 @@ main{
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);    
 }
 #bloco-modulo:hover{
-    margin-top:-40px;
+    background-color: #00FDFF;
     border: 8px solid #00ffcc;
 }
 @keyframes aparecer {
@@ -108,7 +180,8 @@ main{
         transform: translateX(0px);
     }
     100%{
-        transform: scale(0.9);
+        
+        transform: scale(0.8);
     }
     
 }

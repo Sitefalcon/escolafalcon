@@ -8,6 +8,7 @@
     header{
         display: flex;
         justify-content: space-evenly;
+        background-color: #1F1F1F;
     }
     .fundo-header{
         display: flex;
